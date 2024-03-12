@@ -69,7 +69,7 @@
         });
         
         // Click on the dismiss button if it appears
-        var dismissButton = document.querySelector('.ns-n2zis-e-5.close-button');
+        var dismissButton = document.querySelector('.ns-n1sqs-e-14.close-button');
         if (dismissButton && !buttonsClicked['dismiss-button']) {
             dismissButton.click();
             buttonsClicked['dismiss-button'] = true;
