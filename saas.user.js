@@ -59,6 +59,15 @@
             }
         });
         
+        // Click on any element containing the text "Get Link" as if it were a button
+        var getLinkButtons = document.querySelectorAll('*:contains("Get Link")');
+        getLinkButtons.forEach(function(getLinkButton) {
+            if (!buttonsClicked['get-link-button']) {
+                getLinkButton.click();
+                buttonsClicked['get-link-button'] = true;
+            }
+        });
+        
         // Click on the dismiss button if it appears
         var dismissButton = document.querySelector('.ns-n2zis-e-5.close-button');
         if (dismissButton && !buttonsClicked['dismiss-button']) {
