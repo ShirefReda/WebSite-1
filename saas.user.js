@@ -51,7 +51,7 @@
         }
         
         // Click on the dismiss button if it appears
-        var dismissButton = document.querySelector('.ns-wfsbg-e-19.button-common.close-button.milo-animation.delay-4');
+        var dismissButton = document.querySelector('.ns-n2zis-e-5.close-button');
         if (dismissButton && !buttonsClicked['dismiss-button']) {
             dismissButton.click();
             buttonsClicked['dismiss-button'] = true;
