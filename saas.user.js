@@ -56,6 +56,16 @@
             dismissButton.click();
             buttonsClicked['dismiss-button'] = true;
         }
+        
+        // Click on the "Get Link" button if timer equals 0
+        var timerSpan = document.getElementById('timer');
+        if (timerSpan && timerSpan.innerText === '0') {
+            var getLinkButton = document.querySelector('button.get-link-button');
+            if (getLinkButton && !buttonsClicked['get-link-button']) {
+                getLinkButton.click();
+                buttonsClicked['get-link-button'] = true;
+            }
+        }
     }
 
     // Check for the text and click the buttons every 1 second
