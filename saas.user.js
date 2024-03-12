@@ -49,6 +49,13 @@
                 buttonsClicked['button#jambo'] = true;
             }
         }
+        
+        // Click on the dismiss button if it appears
+        var dismissButton = document.querySelector('.ns-wfsbg-e-19.button-common.close-button.milo-animation.delay-4');
+        if (dismissButton && !buttonsClicked['dismiss-button']) {
+            dismissButton.click();
+            buttonsClicked['dismiss-button'] = true;
+        }
     }
 
     // Check for the text and click the buttons every 1 second
