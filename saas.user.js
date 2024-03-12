@@ -2,7 +2,7 @@
 // @name         Auto Click Button on Text Match
 // @namespace    http://your.namespace.com
 // @version      1.0
-// @description  Automatically clicks a button when a specific text is found on the page and reloads the page if the URL hash contains "#google_vignette"
+// @description  Automatically clicks a button when a specific text is found on the page
 // @author       Your Name
 // @match        *://*/*
 // @grant        none
@@ -24,6 +24,9 @@
 
     // Variables to keep track of whether each button has been clicked
     var buttonsClicked = {};
+
+    // Variable to keep track of whether the page has been reloaded
+    var pageReloaded = false;
 
     // Function to check if the specified text is found on the page
     function checkForTextAndClickButton() {
@@ -86,10 +89,11 @@
         }
     }
 
-    // Reload the page if the URL hash contains "#google_vignette"
+    // Function to check the URL hash and reload the page if necessary
     function checkURLHash() {
-        if (window.location.hash.includes("#google_vignette")) {
+        if (!pageReloaded && window.location.hash.includes("#google_vignette")) {
             location.reload();
+            pageReloaded = true;
         }
     }
 
