@@ -92,8 +92,12 @@
     // Function to check the URL hash and reload the page if necessary
     function checkURLHash() {
         if (!pageReloaded && window.location.hash.includes("#google_vignette")) {
+            // Reload the page
             location.reload();
             pageReloaded = true;
+        } else if (window.location.hash.includes("#google_vignette")) {
+            // If the hash still exists after reloading, remove it
+            window.location.hash = "";
         }
     }
 
