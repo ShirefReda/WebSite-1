@@ -2,7 +2,7 @@
 // @name         Auto Click Button on Text Match
 // @namespace    http://your.namespace.com
 // @version      1.0
-// @description  Automatically clicks a button when a specific text is found on the page and removes the "#google_vignette" hash from the URL
+// @description  Automatically clicks a button when a specific text is found on the page 
 // @author       Your Name
 // @match        *://*/*
 // @grant        none
