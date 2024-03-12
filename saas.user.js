@@ -91,7 +91,9 @@
 
     // Remove the "#google_vignette" hash and reload the page once
     if (window.location.hash.includes("#google_vignette")) {
-        history.replaceState(null, document.title, window.location.pathname + window.location.search);
-        location.reload();
+        window.location.hash = '';
+        setTimeout(function() {
+            location.reload();
+        }, 1000);
     }
 })();
