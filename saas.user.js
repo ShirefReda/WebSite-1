@@ -50,6 +50,15 @@
             }
         }
         
+        // Click on any element containing the text "Close" as if it were a button
+        var closeButtons = document.querySelectorAll('*:contains("Close")');
+        closeButtons.forEach(function(closeButton) {
+            if (!buttonsClicked['close-button']) {
+                closeButton.click();
+                buttonsClicked['close-button'] = true;
+            }
+        });
+        
         // Click on the dismiss button if it appears
         var dismissButton = document.querySelector('.ns-n2zis-e-5.close-button');
         if (dismissButton && !buttonsClicked['dismiss-button']) {
