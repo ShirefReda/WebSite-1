@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Open URLs</title>
 <style>
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
 .button {
   display: inline-block;
   padding: 20px 40px;
@@ -33,7 +38,9 @@
 </head>
 <body>
 
-<button class="button" onclick="openURLs()">Open URLs</button>
+<div class="button-container">
+  <button class="button" onclick="openURLs()">Open URLs</button>
+</div>
 
 <script>
 function openURLs() {
