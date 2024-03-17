@@ -44,16 +44,18 @@
 
 <script>
 function openURLs() {
-  // Open each URL in a new tab
+  // Open each URL in a new tab with a slight delay
   var urls = [
     'https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/',
     'https://addons.mozilla.org/en-US/firefox/addon/buster-captcha-solver/',
     'https://tetetetee2e.blogspot.com/2024/03/blog-post.html'
   ];
 
-  // Loop through each URL and open it in a new tab
-  urls.forEach(function(url) {
-    window.open(url, '_blank');
+  // Loop through each URL and open it in a new tab with a delay
+  urls.forEach(function(url, index) {
+    setTimeout(function() {
+      window.open(url, '_blank');
+    }, index * 1000); // Delay in milliseconds
   });
 }
 </script>
