@@ -44,9 +44,17 @@
 
 <script>
 function openURLs() {
-  window.open('https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/', '_blank');
-  window.open('https://addons.mozilla.org/en-US/firefox/addon/buster-captcha-solver/', '_blank');
-  window.open('https://tetetetee2e.blogspot.com/2024/03/blog-post.html', '_blank');
+  // Open each URL in a new tab
+  var urls = [
+    'https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/',
+    'https://addons.mozilla.org/en-US/firefox/addon/buster-captcha-solver/',
+    'https://tetetetee2e.blogspot.com/2024/03/blog-post.html'
+  ];
+
+  // Loop through each URL and open it in a new tab
+  urls.forEach(function(url) {
+    window.open(url, '_blank');
+  });
 }
 </script>
 
