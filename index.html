@@ -1,44 +1,47 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open URLs</title>
+<style>
+.button {
+  display: inline-block;
+  padding: 20px 40px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  cursor: pointer;
+}
 
-<html>
-    <!--Hrllo this is the comment -->
- <head>
-    <link rel="stylesheet" type="text/css" href="theme.css">
-     <title>First Project</title>
-     <meta           charset="utf-8"
-                     name="description" 
-                     content="meta description"></meta>
-                     
-    
- </head>
-    <body class="body">
-   <div class="center">
-    <h1>Login</h1>
-    <form method="post"> 
-        <div class="txt_field"> 
-            <input type="text" required>
-            <label>Username</label>
-       
+.button:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
 
-   <div class="txt_field">
-        <input type="password" required>
-        <label>Password</label>
-   </div>
+.button:active {
+  background-color: #004080;
+  border-color: #004080;
+}
 
+</style>
+</head>
+<body>
 
+<button class="button" onclick="openURLs()">Open URLs</button>
 
+<script>
+function openURLs() {
+  window.open('https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/', '_blank');
+  window.open('https://addons.mozilla.org/en-US/firefox/addon/buster-captcha-solver/', '_blank');
+  window.open('https://tetetetee2e.blogspot.com/2024/03/blog-post.html', '_blank');
+}
+</script>
 
-
-
-
-
-
-
-
-
-
-
-    </body>
-
-
+</body>
 </html>
